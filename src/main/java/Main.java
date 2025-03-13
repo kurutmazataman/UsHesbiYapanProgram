@@ -27,6 +27,10 @@ public class Main {
     }
     // Creating recursive method for calculating power of the number.
     public static double recursivePow(int floorNumb,int powNumb){
-        return powNumb == 0 ? 1 : floorNumb * recursivePow(floorNumb,--powNumb);
+        if (powNumb == 0) {
+            return 1;
+        } else {
+            return floorNumb * recursivePow(floorNumb, powNumb - 1);
+        }
     }
 }
