@@ -11,7 +11,7 @@ public class Main {
             System.out.print("Lutfen taban sayisini giriniz: ");
             byte floorNumb = scn.nextByte();
 
-            System.out.println("Lutfen tavan sayisini giriniz: ");
+            System.out.print("Lutfen tavan sayisini giriniz: ");
             byte powNumb = scn.nextByte();
 
             System.out.println("Sonuc: " + recursivePow(floorNumb,powNumb));
@@ -29,6 +29,4 @@ public class Main {
     public static double recursivePow(int floorNumb,int powNumb){
         return powNumb == 0 ? 1 : floorNumb * recursivePow(floorNumb,--powNumb);
     }
-
-
 }
