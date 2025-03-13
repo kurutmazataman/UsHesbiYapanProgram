@@ -27,7 +27,11 @@ byte powNumb = scn.nextByte();  // Tavan sayısı alınır
 #### 2. Rekürsif Üs Hesaplama:
 ```java
 public static double recursivePow(int floorNumb, int powNumb) {
-    return powNumb == 0 ? 1 : floorNumb * recursivePow(floorNumb, --powNumb);
+            if (powNumb == 0) {
+            return 1;
+        } else {
+            return floorNumb * recursivePow(floorNumb, powNumb - 1);
+        }
 }
 ```
 - Bu metot, üs hesaplamak için rekürsiyon kullanır. `powNumb == 0` olduğunda, üs sıfır olduğu için sonuç 1 döndürülür (her sayının sıfırıncı kuvveti 1'dir).
