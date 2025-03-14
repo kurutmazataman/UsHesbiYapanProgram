@@ -16,11 +16,13 @@
 
 #### 1. Kullanıcıdan Girdi Alma:
 ```java
-System.out.print("Lutfen taban sayisini giriniz: ");
-byte floorNumb = scn.nextByte();  // Taban sayısı alınır
+byte floorNumb = getUsurInput(scn, "Lutfen taban sayisini giriniz: ");
+byte powNumb = getUsurInput(scn, "Lutfen tavan sayisini giriniz: ");
 
-System.out.print("Lutfen tavan sayisini giriniz: ");
-byte powNumb = scn.nextByte();  // Tavan sayısı alınır
+public static byte getUsurInput(Scanner scn, String valueToWrite) throws InputMismatchException, NullPointerException {
+   System.out.print(valueToWrite);
+   return scn.nextByte();
+}
 ```
 - Burada kullanıcıdan iki tane `byte` türünde sayılar alınır: biri taban sayısı (`floorNumb`) ve diğeri ise üssü belirtilen sayıdır (`powNumb`).
 
